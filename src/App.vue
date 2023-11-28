@@ -1,13 +1,12 @@
 <template>
-  <div
-    class="bg-black text-white px-10 h-screen w-screen flex flex-col justify-center items-center gap-10"
-  >
-    <h1 class="text-9xl">Welcome to Tech Jobs</h1>
-  </div>
+  <primary-nav />
 </template>
 
 <script>
+import PrimaryNav from "@/components/PrimaryNav.vue";
+
 export default {
   name: "App",
+  components: { PrimaryNav },
 };
 </script>
