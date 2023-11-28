@@ -16,7 +16,13 @@
     </ul>
 
     <profile-image v-if="signedIn" data-test="profile-image" />
-    <action-button v-else data-test="sign-in-button" @click="signIn" />
+    <action-button
+      v-else
+      data-test="sign-in-button"
+      type="primary"
+      text="Sign In"
+      @click="signIn"
+    />
   </nav>
 </template>
 

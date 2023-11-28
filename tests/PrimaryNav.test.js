@@ -1,7 +1,6 @@
 import { mount } from "@vue/test-utils";
 
 import PrimaryNav from "@/components/PrimaryNav.vue";
-import { data } from "autoprefixer";
 
 describe("test primary nav", () => {
   it("display the correct brand name", () => {
