@@ -9,6 +9,9 @@ module.exports = {
         "custom-green-1": "#137333",
         "custom-blue-1": "#1967d2",
       },
+      boxShadow: {
+        "custom-blue": "0 0 3px 3px #4285f4",
+      },
     },
   },
   variants: { extend: {} },
