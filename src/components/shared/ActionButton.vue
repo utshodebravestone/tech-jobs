@@ -9,8 +9,8 @@ export default {
   name: "ActionButton",
 
   props: {
-    text: { required: true },
-    type: { required: false, default: "primary" },
+    text: { type: String, required: true },
+    type: { type: String, required: false, default: "primary" },
   },
 
   computed: {
