@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-3 border-b border-custom-gray-1"
+    class="fixed top-0 left-0 w-full h-20 flex justify-between items-center px-6 py-3 border-b border-custom-gray-1"
   >
     <a class="text-4xl font-medium" data-test="brand">{{ brand }}</a>
 
@@ -9,22 +9,25 @@
         <a
           :href="menu.link"
           class="hover:opacity-50 transition-opacity duration-300"
-          >{{ menu.name }}</a
         >
+          {{ menu.name }}
+        </a>
       </li>
     </ul>
 
-    <action-button />
+    <profile-image v-if="signedIn" data-test="profile-image" />
+    <action-button v-else data-test="sign-in-button" @click="signIn" />
   </nav>
 </template>
 
 <script>
 import ActionButton from "@/components/shared/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
 
 export default {
   name: "PrimaryNav",
 
-  components: { ActionButton },
+  components: { ActionButton, ProfileImage },
 
   data: () => ({
     brand: "Tech Jobs",
@@ -35,6 +38,13 @@ export default {
       { name: "Students", link: "" },
       { name: "Jobs", link: "" },
     ],
+    signedIn: false,
   }),
+
+  methods: {
+    signIn() {
+      this.signedIn = !this.signedIn;
+    },
+  },
 };
 </script>
