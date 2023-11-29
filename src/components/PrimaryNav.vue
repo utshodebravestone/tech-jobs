@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 left-0 w-full h-20 flex justify-between items-center px-6 py-3 border-b border-custom-gray-1"
+    class="w-full h-20 flex justify-between items-center px-6 border-b border-custom-gray-1"
   >
     <a class="text-4xl font-medium" data-test="brand">{{ brand }}</a>
 
