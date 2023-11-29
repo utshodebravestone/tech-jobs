@@ -10,7 +10,12 @@ export default {
 
   props: {
     text: { type: String, required: true },
-    type: { type: String, required: false, default: "primary" },
+    type: {
+      type: String,
+      required: false,
+      default: "primary",
+      validator: (value) => ["primary", "secondary"].includes(value),
+    },
   },
 
   computed: {
